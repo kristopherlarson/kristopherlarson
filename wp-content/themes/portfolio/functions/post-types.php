@@ -1,21 +1,22 @@
-<?php /*
-add_action( 'init', 'amped_post_init' );
+<?php
 
-function amped_post_init() {
+
+// Create Portfolio Custom Post Type
+add_action( 'init', 'portfolio_init' );
+
+function portfolio_init() {
 	$labels = array(
-		'name'               => 'Amped Post Type',
-		'singular_name'      => 'Amped Post',
-		'menu_name'          => 'Amped',
+		'name'               => 'Portfolio',
+		'singular_name'      => 'Portfolio',
+		'menu_name'          => 'Portfolio',
+		'name_admin_bar'     => 'Portfolio',
 		'add_new'            => 'Add New',
-		'add_new_item'       => 'Add New Amped Post',
-		'new_item'           => 'New Amped Post',
-		'edit_item'          => 'Edit Amped Post',
-		'view_item'          => 'View Amped Post',
-		'all_items'          => 'All Amped Posts',
-		'search_items'       => 'Search Amped Posts',
-		'parent_item_colon'  => '',
-		'not_found'          => 'No Amped Posts found.',
-		'not_found_in_trash' => 'No Amped Posts found in Trash.',
+		'add_new_item'       => 'Add New Portfolio',
+		'new_item'           => 'New Portfolio',
+		'edit_item'          => 'Edit Portfolio Item',
+		'view_item'          => 'View Portfolio',
+		'all_items'          => 'All Portfolio Items',
+		'search_items'       => 'Search Portfolio Items',
 	);
 
 	$args = array(
@@ -24,14 +25,15 @@ function amped_post_init() {
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
-		'query_var'          => false,
+		'query_var'          => true,
 		'capability_type'    => 'post',
-		'has_archive'        => false,
+		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'menu_icon'          => 'dashicons-editor-table',
-		'supports'           => array( 'title', 'custom-fields' )
+		'menu_icon'          => 'dashicons-format-gallery',
+		'supports'           => array( 'title')
 	);
 
-	register_post_type( 'amped-post', $args );
-} */
+	register_post_type( 'portfolio', $args );
+
+}
