@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+// Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
+@import "config/imports";
+
+@import 'foundation';
+
+// Import Motion-UI from vendor files
+// @import "motion-ui";
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+// Select the components you want to use
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-visibility-classes;
+@include foundation-responsive-embed;
+
+/* CUSTOM STYLES */
+@import "normalize";
+@import "utilities/imports";
+@import "content/imports";
+@import "woocommerce/imports";
+//@import "vendor/imports";

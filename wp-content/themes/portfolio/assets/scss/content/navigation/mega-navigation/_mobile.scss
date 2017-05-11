@@ -1,0 +1,95 @@
+.mobile-nav-active {
+    .mega-nav {
+
+        .menu-item {
+            width: 100%;
+            display: block;
+        }
+
+        .sub-menu {
+            display: none;
+        }
+
+        // Open Menu
+        .is-active {
+            & + .sub-menu{
+                display: block;
+            }
+        }
+
+        .is-parent-trigger {
+            position: relative;
+            text-align: left;
+
+            &:after {
+                position: absolute;
+                right: 24px;
+                top: 50%;
+                content: '+';
+                transform: perspective(1px) translateY(-50%);
+            }
+
+            &.is-active {
+                &:after {
+                    content: '-';
+                }
+            }
+        }
+
+        // Top Level Menu Items
+        & > .menu-item {
+            border-bottom: 1px solid grey;
+
+            &:first-child {
+                border-top: 1px solid grey;
+            }
+
+            a,
+            .is-parent-trigger {
+                padding: 15px 80px 15px 24px;
+                font-size: 24px;
+                display: block;
+                width: 100%;
+            }
+
+            // First level of sub menus
+            & > .sub-menu {
+                a,
+                .is-parent-trigger {
+                    font-size: 18px;
+                    width: 100%;
+                    display: block;
+                    padding-left: 0;
+                }
+
+                .menu-item {
+                    padding-left: 24px;
+
+                    &:first-child {
+                        border-top: 1px solid grey;
+                    }
+
+                    & ~ .menu-item {
+                        a,
+                        .is-parent-trigger {
+                            border-top: 1px solid grey;
+                        }
+                    }
+
+                    // Third layer of links
+                    .menu-item {
+                        padding-left: 48px;
+
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            &.is-active {
+
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+// Navigation Positioning
+@mixin nav-positioner (
+    $float: false,
+    $center: false,
+    $offset: false,
+    $position: false,
+    $padding: false,
+    $margin: false
+) {
+    // If float set float parameter if inline set float to inline
+    @if $float {
+        @if $float == right or $float == true { float: right; }
+        @else if $float == left { float: left; }
+        @else if $float == inline { display: inline-block; margin-right: -4px; vertical-align: top; }
+        @else { float: none; }
+    }
+
+    // Set center to true if nav is to be centered
+    @if $center {
+        margin-#{$foot-nav-top-margin}: auto;
+        margin-#{$foot-nav-bottom-margin}: auto;
+        float: none;
+    }
+
+    // Default is position static, set position if needing relative, absolute or fixed.
+    @if $position {
+        @if $position == relative or $position == true { position: relative; }
+        @else if $position == absolute { position: absolute; }
+        @else if $position == fixed { position: fixed }
+        @else { position: static; }
+    }
+
+    // If positioning absolute, relative or fixed setup position
+    @if $position and $offset {
+        @if $foot-nav-offset-top { top: $foot-nav-offset-top; }
+        @if $foot-nav-offset-right { right: $foot-nav-offset-right; }
+        @if $foot-nav-offset-bottom { bottom: $foot-nav-offset-bottom; }
+        @if $foot-nav-offset-left { left: $foot-nav-offset-left; }
+    }
+
+    // If positioning absolute, relative or fixed setup position
+    @if $margin {
+        @if $foot-nav-top-margin { margin-top: $foot-nav-top-margin; }
+        @if $foot-nav-right-margin { margin-right: $foot-nav-right-margin; }
+        @if $foot-nav-bottom-margin { margin-bottom: $foot-nav-bottom-margin; }
+        @if $foot-nav-left-margin { margin-left: $foot-nav-left-margin; }
+    }
+
+    // If positioning absolute, relative or fixed setup position
+    @if $padding {
+        @if $foot-nav-top-padding { padding-top: $foot-nav-top-padding; }
+        @if $foot-nav-right-padding { padding-right: $foot-nav-right-padding; }
+        @if $foot-nav-bottom-padding { padding-bottom: $foot-nav-bottom-padding; }
+        @if $foot-nav-left-padding { padding-left: $foot-nav-left-padding; }
+    }
+}

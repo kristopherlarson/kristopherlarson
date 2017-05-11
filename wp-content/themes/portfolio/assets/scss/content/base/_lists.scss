@@ -1,0 +1,92 @@
+ul,
+ol,
+dl {
+    .base-content & {
+        font-size: $font-size-content-s;
+        margin-top: rem-calc(24);
+        margin-bottom: rem-calc(24);
+
+        @include mq($mq-full) {
+            font-size: $font-size-content;
+            margin-top: rem-calc(32);
+            margin-bottom: rem-calc(32);
+        }
+    }
+}
+
+li {
+    & ~ li {
+        .base-content & {
+            margin-top: 18px;
+        }
+    }
+}
+
+/* UL */
+
+.list-bullet,
+.base-content ul {
+    list-style: disc outside;
+    padding-left: 1em;
+    padding-right: 2em;
+
+    @include mq($mq-full) {
+        padding-left: 1em;
+        padding-right: 3em;
+    }
+
+    li {
+        padding-left: .56em;
+    }
+}
+
+/* OL */
+
+.list-number,
+.base-content ol {
+    list-style: decimal outside;
+    padding-left: 0;
+    padding-right: 2em;
+    counter-reset: item;
+
+    @include mq($mq-full) {
+        padding-right: 3em;
+    }
+
+    li {
+        list-style-type: none;
+        counter-increment: item;
+        position: relative;
+        padding-left: 2em;
+        &:before {
+            font-weight: bold;
+            content: counter(item) ".";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+/* DL */
+
+.dl,
+.base-content dl {
+    padding-left: 0;
+    padding-right: 2em;
+
+    @include mq($mq-full) {
+        padding-left: 0;
+        padding-right: 3em;
+    }
+}
+
+.dt,
+.base-content dt {
+    font-weight: $font-weight-bold;
+}
+
+.dd,
+.base-content dd {
+    margin-bottom: 20px;
+}

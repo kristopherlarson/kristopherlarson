@@ -1,0 +1,83 @@
+/*
+====================
+	HEADING STYLES
+====================
+*/
+
+// Headings
+.base-content {
+
+    // Heading sizes
+    @each $size, $headers in $header-styles {
+        @include breakpoint($size) {
+            @each $header, $font-size in $headers {
+                #{$header} {
+                    font-size: rem-calc($font-size);
+                }
+            }
+        }
+    }
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        font-family: $heading-font-family;
+
+        @include mq($mq-full) {
+
+        }
+    }
+
+
+    h1,
+    .h1 {
+
+        @include mq($mq-full) {
+
+        }
+    }
+
+    h2,
+    .h2 {
+
+        @include mq($mq-full) {
+
+        }
+    }
+
+    h3,
+    .h3 {
+
+        @include mq($mq-full) {
+
+        }
+    }
+
+    h4,
+    .h4 {
+
+        @include mq($mq-full) {
+
+        }
+    }
+
+    h5,
+    .h5 {
+
+        @include mq($mq-full) {
+
+        }
+    }
+
+    h6,
+    .h6 {
+
+        @include mq($mq-full) {
+
+        }
+    }
+
+}

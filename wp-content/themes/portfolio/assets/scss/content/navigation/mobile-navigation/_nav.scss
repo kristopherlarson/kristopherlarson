@@ -1,0 +1,104 @@
+/*
+====================
+  MOBILE TRIGGER STYLES
+====================
+*/
+
+// Keeps rest of the site from not scrolling
+html.no-scroll,
+body.no-scroll {
+
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+
+}
+
+.mobile-nav-active {
+
+    .main-nav {
+        width: 100%;
+        height: 100%;
+        background-color: $mobile-nav-background-color;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: $mobile-nav-padding;
+    }
+
+    .navbar {
+        opacity: 1;
+        float: none;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            position: relative;
+            display: block;
+            margin: $mobile-nav-parent-li-margin;
+            line-height: $mobile-nav-parent-li-line-height;
+            padding: $mobile-nav-parent-li-padding;
+
+            & ~ li {
+                border-style: $mobile-nav-parent-li-border-style;
+                border-color: $mobile-nav-parent-li-border-color;
+                border-top-width: $mobile-nav-parent-li-top-border;
+                border-right-width: $mobile-nav-parent-li-right-border;
+                border-bottom-width: $mobile-nav-parent-li-bottom-border;
+                border-left-width: $mobile-nav-parent-li-left-border;
+            }
+
+            > a {
+                position: relative;
+                display: block;
+                color: $mobile-nav-parent-link-color;
+                font-size: $mobile-nav-parent-link-font-size;
+                font-family: $mobile-nav-parent-link-font-family;
+                line-height: $mobile-nav-parent-link-line-height;
+                font-weight: $mobile-nav-parent-link-font-weight;
+                padding: $mobile-nav-parent-link-padding;
+                margin: $mobile-nav-parent-link-margin;
+                width: $mobile-nav-parent-link-width;
+                height: $mobile-nav-parent-link-height;
+            }
+
+        }
+
+        > li:hover,
+        > li:focus {
+            > a {
+                color: $mobile-nav-parent-link-hover-color;
+                background-color: $mobile-nav-parent-link-hover-background;
+            }
+        }
+
+        > li.active {
+            cursor: pointer;
+            > a {
+                color: $mobile-nav-parent-link-hover-color;
+                background-color: $mobile-nav-parent-link-hover-background;
+            }
+        }
+
+        > ul {
+
+            li {
+
+                a {
+
+                }
+            }
+        }
+
+    }
+
+}
+

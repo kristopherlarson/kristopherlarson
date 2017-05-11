@@ -1,0 +1,123 @@
+/*
+====================
+  MOBILE TRIGGER STYLES
+====================
+*/
+
+.mobile-trigger {
+
+    position: $mobile-trigger-position;
+    top: $mobile-trigger-offset-top;
+    right: $mobile-trigger-offset-right;
+    bottom: $mobile-trigger-offset-bottom;
+    left: $mobile-trigger-offset-left;
+    padding: $mobile-trigger-padding;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: $mobile-trigger-hover-transition-duration;
+    transition-timing-function: $mobile-trigger-hover-transition-timing-function;
+    font: inherit;
+    color: $mobile-trigger-text-color;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    overflow: visible;
+    @include mq($mq-full) {
+        display: none;
+    }
+
+    // Nav Open Styles
+    .mobile-nav-active & {
+        z-index: 1001;
+        top: $mobile-trigger-menu-offset-top;
+        right: $mobile-trigger-menu-offset-right;
+        bottom: $mobile-trigger-menu-offset-bottom;
+        left: $mobile-trigger-menu-offset-left;
+    }
+
+    &:hover {
+        @if $mobile-trigger-hover-use-filter == true {
+            filter: $mobile-trigger-hover-filter;
+        }
+        @else {
+            opacity: $mobile-trigger-hover-opacity;
+        }
+    }
+
+    &.is-active {
+        .mobile-trigger-inner {
+            transform: rotate(45deg);
+            transition-delay: 0.14s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &::before {
+                top: 0;
+                opacity: 0;
+                transition: top 0.1s ease,
+                opacity 0.1s 0.14s ease;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 0.1s ease,
+                transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+        }
+    }
+
+}
+
+.mobile-trigger-box {
+
+    width: $mobile-trigger-layer-width;
+    height: $mobile-trigger-layer-height * 3 + $mobile-trigger-layer-spacing * 2;
+    display: inline-block;
+    position: relative;
+    vertical-align: $mobile-trigger-vertical-alignment;
+    margin-left: $mobile-trigger-box-spacing;
+
+}
+
+.mobile-trigger-inner {
+
+    display: block;
+    top: 50%;
+    margin-top: $mobile-trigger-layer-height / -2;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    &,
+    &::before,
+    &::after {
+        width: $mobile-trigger-layer-width;
+        height: $mobile-trigger-layer-height;
+        background-color: $mobile-trigger-layer-color;
+        border-radius: $mobile-trigger-layer-border-radius;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+    }
+
+    &::before {
+        top: ($mobile-trigger-layer-spacing + $mobile-trigger-layer-height) * -1;
+        transition: top 0.1s 0.14s ease,
+        opacity 0.1s ease;
+    }
+
+    &::after {
+        bottom: ($mobile-trigger-layer-spacing + $mobile-trigger-layer-height) * -1;
+        transition: bottom 0.1s 0.14s ease,
+        transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+}
+

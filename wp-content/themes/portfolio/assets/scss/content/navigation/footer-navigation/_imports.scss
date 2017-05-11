@@ -1,0 +1,67 @@
+/*
+====================
+  NAVIGATION STYLES
+====================
+*/
+
+// CSS Arrow notation > definition http://www.w3schools.com/cssref/sel_element_gt.asp
+
+
+
+@import 'variables';
+@import 'mixins/nav-positioner';
+@import 'placeholders/hover-line';
+
+.sub-nav {
+    width: $sub-nav-width;
+    height: $sub-nav-height;
+}
+
+.foot-nav {
+    @extend %hover-line;
+    background-color: $foot-nav-background;
+    @include mq($mq-full) {
+        @include nav-positioner;
+    }
+
+    > li {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -4px;
+        line-height: $foot-nav-li-line-height;
+        padding: $foot-nav-li-padding;
+
+        > a {
+            position: relative;
+            display: inline-block;
+            color: $foot-nav-link-color;
+            font-size: $foot-nav-link-font-size;
+            font-family: $foot-nav-link-font-family;
+            line-height: $foot-nav-link-line-height;
+            font-weight: $foot-nav-link-font-weight;
+            padding: $foot-nav-link-padding;
+            margin: $foot-nav-link-margin;
+        }
+
+    }
+
+    > li:hover,
+    > li:focus {
+        > a {
+            color: $foot-nav-link-hover;
+            background-color: $foot-nav-hover-background;
+        }
+    }
+
+    > li.active {
+        cursor: pointer;
+        > a {
+            color: $foot-nav-link-hover;
+            background-color: $foot-nav-active-background;
+        }
+    }
+
+}
+
+

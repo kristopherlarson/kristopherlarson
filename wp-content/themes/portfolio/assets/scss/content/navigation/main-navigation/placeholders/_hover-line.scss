@@ -1,0 +1,24 @@
+%hover-line {
+
+    > li > a:first-child:after {
+        display: block;
+        position: absolute;
+        top: $nav-bar-hover-line-offset-top;
+        right: $nav-bar-hover-line-offset-right;
+        bottom: $nav-bar-hover-line-offset-bottom;
+        left: $nav-bar-hover-line-offset-left;
+        width: $nav-bar-hover-line-pixel-width;
+        height: $nav-bar-hover-line-pixel-height;
+        background-color: $nav-bar-hover-line;
+        content: '';
+        opacity: 0;
+        visibility: hidden;
+        @extend %transition;
+    }
+
+    > li:hover > a:first-child:after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}

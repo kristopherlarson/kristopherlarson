@@ -1,0 +1,30 @@
+@mixin fieldset {
+    border: $fieldset-border;
+    padding: $fieldset-padding;
+    margin: $fieldset-margin;
+
+    legend {
+        // Covers up the fieldset's border to create artificial padding
+        background: $body-background;
+        padding: $legend-padding;
+        margin: 0;
+        margin-#{$global-left}: rem-calc(-3);
+    }
+}
+
+@mixin foundation-form-fieldset {
+    fieldset {
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    legend {
+        margin-bottom: $form-spacing * 0.5;
+        max-width: 100%;
+    }
+
+    .fieldset {
+        @include fieldset;
+    }
+}

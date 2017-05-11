@@ -1,0 +1,15 @@
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: ' ';
+        display: table;
+        @if $global-flexbox {
+            flex-basis: 0;
+            order: 1;
+        }
+    }
+
+    &::after {
+        clear: both;
+    }
+}

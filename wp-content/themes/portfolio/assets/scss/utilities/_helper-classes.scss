@@ -1,0 +1,58 @@
+/* 
+====================
+	HELPERS
+====================
+*/
+
+%section-spacing,
+.section-spacing {
+    padding: $half-spacing 0;
+    @include mq($mq-medium) {
+        padding: $section-spacing 0;
+    }
+}
+
+%visual-hide,
+.visual-hide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+%no-alias,
+.no-alias {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-smoothing: subpixel-antialiased;
+}
+
+.media-cover,
+%media-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+.background-cover,
+%background-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.text-center {
+    text-align: center;
+}

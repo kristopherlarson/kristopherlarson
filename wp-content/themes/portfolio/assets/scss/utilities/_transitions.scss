@@ -1,0 +1,30 @@
+/* 
+====================
+	TRANSITIONS
+====================
+*/
+
+@keyframes scaleIn {
+	from { transform: scale(0); opacity: 0; }
+	to { transform: scale(1); opacity: 1 }
+}
+
+// The default or standard transition
+%transition {
+  	transition: all 0.15s ease-in-out;
+}
+
+// Remove transition
+%transition-none {
+  	transition: none;
+}
+
+// The default opacity transition
+%transition-opacity {
+	transition: opacity 0.15s ease-in;
+}
+
+// The default fill transition
+%transition-fill {
+	transition: fill 0.5s ease-in;
+}

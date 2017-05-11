@@ -1,0 +1,108 @@
+/*
+====================
+  MOBILE TRIGGER BUTTON
+====================
+*/
+
+// Positioning
+$mobile-trigger-margin                  : false !default;
+$mobile-trigger-padding                 : 10px 0 10px 0 !default;
+$mobile-trigger-background              : transparent !default;
+$mobile-trigger-position                : absolute !default;
+// Mixin position needs to be set for offset variables to work
+$mobile-trigger-offset-top              : 50% !default;
+$mobile-trigger-offset-right            : 32px !default;
+$mobile-trigger-offset-bottom           : auto !default;
+$mobile-trigger-offset-left             : auto !default;
+$mobile-trigger-menu-offset-top         : 10px !default;
+$mobile-trigger-menu-offset-right       : 32px !default;
+$mobile-trigger-menu-offset-bottom      : auto !default;
+$mobile-trigger-menu-offset-left        : auto !default;
+
+// Text
+$mobile-trigger-text-color          : $black !default;
+$mobile-trigger-font-size           : 1rem !default;
+$mobile-trigger-vertical-alignment  : middle !default;
+
+// Hamburger
+$mobile-trigger-box-spacing         : 6px !default;
+$mobile-trigger-layer-width         : 30px !default;
+$mobile-trigger-layer-height        : 2px !default;
+$mobile-trigger-layer-spacing       : 6px !default;
+$mobile-trigger-layer-color         : $black !default;
+$mobile-trigger-layer-border-radius : 0px !default;
+
+// Hover Styling
+$mobile-trigger-hover-opacity                   : 0.7 !default;
+$mobile-trigger-hover-transition-duration       : 0.15s !default;
+$mobile-trigger-hover-transition-timing-function: linear !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $mobile-trigger-hover-use-filter as true and
+// change the value of $mobile-trigger-hover-filter accordingly.
+$mobile-trigger-hover-use-filter: false !default;
+$mobile-trigger-hover-filter    : opacity(50%) !default;
+
+
+/*
+====================
+  MOBILE NAVIGATION
+====================
+*/
+
+
+// Container Styles
+$mobile-nav-background-color: $black !default;
+$mobile-nav-padding         : 80px 32px 80px 32px !default;
+
+// Parent List Styles
+$mobile-nav-parent-li-top-border        : 1px !default;
+$mobile-nav-parent-li-right-border      : 0 !default;
+$mobile-nav-parent-li-bottom-border     : 0 !default;
+$mobile-nav-parent-li-left-border       : 0 !default;
+$mobile-nav-parent-li-border-style       : solid !default;
+$mobile-nav-parent-li-border-color      : $black !default;
+$mobile-nav-parent-li-line-height       : 1 !default;
+$mobile-nav-parent-li-padding           : 0 0 0 0 !default;
+$mobile-nav-parent-li-margin            : 0 0 0 0 !default;
+
+// Child List Styles
+$mobile-nav-child-li-top-border         : 0 !default;
+$mobile-nav-child-li-right-border       : 0 !default;
+$mobile-nav-child-li-bottom-border      : 0 !default;
+$mobile-nav-child-li-left-border        : 0 !default;
+$mobile-nav-child-li-border-color       : $black !default;
+$mobile-nav-child-li-border-style       : solid !default;
+$mobile-nav-child-li-line-height        : 1 !default;
+$mobile-nav-child-li-top-padding        : 0 0 0 0 !default;
+$mobile-nav-child-li-top-margin         : 0 0 0 0 !default;
+
+
+// Link Styles
+$mobile-nav-parent-link-color           : $black !default;
+$mobile-nav-parent-link-font-size       : 1.375rem !default;
+$mobile-nav-parent-link-font-family     : inherit !default;
+$mobile-nav-parent-link-line-height     : 1 !default;
+$mobile-nav-parent-link-font-weight     : $font-weight-semibold !default;
+$mobile-nav-parent-link-padding         : 18px 0 18px 0 !default;
+$mobile-nav-parent-link-margin          : 0 0 0 0 !default;
+$mobile-nav-parent-link-height          : auto !default;
+$mobile-nav-parent-link-width           : 100% !default;
+$mobile-nav-parent-link-background-color: transparent !default;
+$mobile-nav-parent-icon                 : false !default;
+$mobile-nav-parent-link-hover-background: transparent !default;
+$mobile-nav-parent-link-hover-color     : $black !default;
+
+// Child Link Styles
+$mobile-nav-child-link-color            : $black !default;
+$mobile-nav-child-link-font-size        : 1rem !default;
+$mobile-nav-child-link-line-height      : 1 !default;
+$mobile-nav-child-link-font-weight      : $font-weight-semibold !default;
+$mobile-nav-child-link-font-family      : inherit !default;
+$mobile-nav-child-link-padding          : 0 0 0 0 !default;
+$mobile-nav-child-link-margin           : 0 0 0 0 !default;
+$mobile-nav-child-link-height           : auto !default;
+$mobile-nav-child-link-width            : 100% !default;
+$mobile-nav-child-link-background-color : transparent !default;
+$mobile-nav-child-link-hover-background : transparent !default;
+$mobile-nav-child-link-hover-color      : $black !default;

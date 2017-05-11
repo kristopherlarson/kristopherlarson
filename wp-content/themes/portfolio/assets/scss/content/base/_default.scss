@@ -1,0 +1,69 @@
+/*
+====================
+	GLOBAL SITE STYLES
+====================
+*/
+
+/* Paragraph Styles */
+p {
+    .base-content & {
+        font-size: $font-size-content-s;
+        margin-bottom: rem-calc(12);
+
+        @include mq($mq-full) {
+            font-size: $font-size-content;
+            margin-bottom: rem-calc(24);
+        }
+    }
+}
+
+/* HR Styles */
+hr {
+    border-top: 1px solid $medium-gray;
+    .base-content & {
+        margin: rem-calc(24) auto;
+    }
+}
+
+/*
+    Remove top margin from first element (whether element or image)
+    Remove bottom margin from last element (whether element or image)
+    Hide any empty Wordpress injected p tags to keep from having weird spacing
+*/
+#main-container {
+    .amped-content {
+        & > {
+            *:empty:not(hr):not(br) {
+                display: none;
+            }
+            *:first-child {
+                margin-top: 0;
+                & > img {
+                    margin-top: 0;
+                }
+            }
+            .wp-image-wrap:nth-child(2) img {
+                margin-top: 0;
+            }
+            *:last-child {
+                margin-bottom: 0;
+                & > img {
+                    margin-bottom: 0;
+                }
+            }
+            .wp-image-wrap:nth-last-child(2) img {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+//
+// WordPress front-end fixes
+//
+// -----------------------------------------------------------------------------
+
+#wpadminbar {
+    position: fixed !important;
+}

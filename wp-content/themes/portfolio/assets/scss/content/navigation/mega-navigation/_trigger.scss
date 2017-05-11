@@ -1,0 +1,6 @@
+.mobile-trigger {
+
+    @include mq($mq-full) {
+        display: none;
+    }
+}

@@ -1,0 +1,27 @@
+/* Anchor: Default */
+
+a {
+    @extend %transition;
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    &:active,
+    &:focus {
+        outline: 1px dotted;
+    }
+}
+
+/* Anchor: Full Styles */
+
+.anchor,
+.amped-content a {
+    color: $anchor-color;
+    position: relative;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $anchor-color-hover;
+    }
+}

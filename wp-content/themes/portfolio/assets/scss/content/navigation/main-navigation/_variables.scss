@@ -1,0 +1,53 @@
+// Setup Navigation
+
+// div.main-nav
+$main-nav-height    : auto !default;
+$main-nav-width     : 100% !default;
+
+// ul.navbar
+$nav-bar-top-margin             : false !default;
+$nav-bar-bottom-margin          : false !default;
+$nav-bar-left-margin            : false !default;
+$nav-bar-right-margin           : false !default;
+$nav-bar-top-padding            : false !default;
+$nav-bar-bottom-padding         : false !default;
+$nav-bar-left-padding           : false !default;
+$nav-bar-right-padding          : false !default;
+$nav-bar-background             : transparent !default;
+// Mixin position needs to be set for offset variables to work
+$nav-bar-offset-top             : false !default;
+$nav-bar-offset-right           : false !default;
+$nav-bar-offset-right-mobile    : false !default;
+$nav-bar-offset-bottom          : false !default;
+$nav-bar-offset-left            : false !default;
+
+
+// .navbar li
+$nav-bar-li-line-height     : 1 !default;
+$nav-bar-li-padding         : rem-calc(0 20px) !default;
+$nav-bar-li-padding-mobile  : rem-calc(0 10px) !default;
+
+// .navbar a
+$nav-bar-link-color         : $white !default;
+$nav-bar-link-line-height   : 1 !default;
+$nav-bar-link-font-size     : 1rem !default;
+$nav-bar-link-line-height   : 1 !default;
+$nav-bar-link-font-family   : inherit !default;
+$nav-bar-link-font-weight   : $font-weight-semibold !default;
+$nav-bar-link-padding       : rem-calc(5px 12px) !default;
+$nav-bar-link-margin        : 0 !default;
+
+// .navbar hover & active effects
+$nav-bar-link-hover         : $white !default;
+$nav-bar-link-active        : $white !default;
+$nav-bar-hover-background   : transparent !default;
+$nav-bar-active-background  : transparent !default;
+
+// If hover line
+$nav-bar-hover-line                 : $white !default;
+$nav-bar-hover-line-pixel-height    : 1px !default;
+$nav-bar-hover-line-pixel-width     : 100% !default;
+$nav-bar-hover-line-offset-top      : auto !default;
+$nav-bar-hover-line-offset-right    : auto !default;
+$nav-bar-hover-line-offset-bottom   : -3px !default;
+$nav-bar-hover-line-offset-left     : 0 !default;

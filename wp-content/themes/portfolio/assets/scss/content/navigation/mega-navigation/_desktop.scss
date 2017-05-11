@@ -1,0 +1,54 @@
+.desktop-nav-active {
+
+    #mega-menu {
+        opacity: 1;
+        transition: opacity .15s ease;
+    }
+
+    .mega-nav {
+        display: none;
+        @include mq($mq-full) {
+            display: block;
+        }
+
+        & > .menu-item {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: -4px;
+
+            & > .sub-menu {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: stretch;
+                position: absolute;
+                top: 100px;
+                right: 0;
+                width: 100vw;
+                padding: 48px 64px 130px;
+                transform: scale(0);
+                background-color: $white;
+                border-bottom: 1px solid grey;
+                z-index: 0;
+                visibility: hidden;
+                opacity: 0;
+
+                & > li {
+                    flex: 1;
+                }
+            }
+        }
+
+        // Menu Open
+        .is-active + .sub-menu.level-1 {
+            z-index: 1;
+            opacity: 1;
+            visibility: visible;
+            animation: scaleIn 0.3s 1 normal forwards;
+        }
+
+        .level-2 {
+            cursor: default;
+        }
+    }
+}

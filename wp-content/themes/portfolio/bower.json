@@ -1,0 +1,17 @@
+{
+  "name": "amped-theme",
+  "dependencies": {
+    "foundation-sites": "^6.3.1",
+    "motion-ui": "~1.2.2",
+    "slick.js": "~1.6.0",
+    "lazysizes": "^3.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

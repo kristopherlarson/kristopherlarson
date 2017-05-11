@@ -1,0 +1,109 @@
+
+/* Images */
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    .article-content & {
+        line-height: 0;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+}
+
+.amped-content {
+    img {
+        line-height: 0;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+}
+
+/* Lazy Load Fade In */
+.lazyload,
+.lazyloading {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+/* Image: Wrappers */
+
+.wp-image-wrap,
+.wp-caption {
+    width: auto !important;
+    max-width: none;
+    margin: 0 auto;
+}
+
+/* Image: Captions */
+
+.wp-caption-text {
+    margin: 6px 0 0;
+    font-family: $body-font-family;
+    color: $dark-gray;
+    font-size: 12px;
+    line-height: 1.5;
+
+    @include mq($mq-full) {
+        font-size: 14px;
+    }
+}
+
+/* Image: Alignments */
+
+.aligncenter,
+.alignnone {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @include mq($mq-full) {
+        margin-top: 36px;
+        margin-bottom: 36px;
+    }
+}
+
+.alignleft,
+.alignright {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @include mq($mq-full) {
+        margin-top: 36px;
+        margin-bottom: 36px;
+        max-width: 50%;
+    }
+}
+
+.alignleft {
+    @include mq($mq-full) {
+        float: left;
+        margin-right: 36px;
+    }
+}
+
+.alignright {
+    @include mq($mq-full) {
+        float: right;
+        margin-left: 36px;
+    }
+}
+
+/* Responsive Media */
+.responsive-embed {
+    .article-content & {
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+        @include mq($mq-full) {
+            margin-top: 36px;
+            margin-bottom: 36px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.desktop-nav-active {
+
+    #main-navigation {
+        opacity: 1;
+        transition: opacity .15s ease;
+    }
+
+    .main-nav {
+        width: $main-nav-width;
+        height: $main-nav-height;
+    }
+
+    .navbar {
+        opacity: 1;
+        height: auto;
+        @include nav-positioner;
+        @extend %hover-line;
+        background-color: $nav-bar-background;
+        display: none;
+        @include mq($mq-full) {
+            display: block;
+        }
+
+        > li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: -4px;
+            line-height: $nav-bar-li-line-height;
+            padding: $nav-bar-li-padding-mobile;
+            @include mq($mq-large) {
+                padding: $nav-bar-li-padding;
+            }
+
+            > a {
+                position: relative;
+                display: inline-block;
+                color: $nav-bar-link-color;
+                font-size: $nav-bar-link-font-size;
+                font-family: $nav-bar-link-font-family;
+                line-height: $nav-bar-link-line-height;
+                font-weight: $nav-bar-link-font-weight;
+                padding: $nav-bar-link-padding;
+
+            }
+
+        }
+
+        > li:hover,
+        > li:focus {
+            > a {
+                color: $nav-bar-link-hover;
+                background-color: $nav-bar-hover-background;
+            }
+        }
+
+        > li.current_page_item,
+        > li.current_page_parent,
+        > li.active {
+            cursor: pointer;
+            > a {
+                color: $nav-bar-link-hover;
+                background-color: $nav-bar-active-background;
+            }
+        }
+
+    }
+}

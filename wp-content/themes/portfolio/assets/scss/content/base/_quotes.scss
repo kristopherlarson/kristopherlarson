@@ -1,0 +1,26 @@
+/* Blockquote */
+blockquote {
+    .base-content & {
+        margin: $blockquote-margin;
+        padding: $blockquote-padding;
+        border-left: $blockquote-border;
+
+        &, p {
+            line-height: 1.5;
+            color: $blockquote-color;
+        }
+    }
+}
+
+/* Cite */
+cite {
+    .base-content & {
+        display: block;
+        font-size: $cite-font-size;
+        color: $cite-color;
+
+        &:before {
+            content: '\2014 \0020';
+        }
+    }
+}

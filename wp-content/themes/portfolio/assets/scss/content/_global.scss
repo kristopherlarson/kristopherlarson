@@ -1,0 +1,42 @@
+/* Global HTML & Body */
+html {
+    background: $html-background;
+}
+
+body {
+    background: $body-background;
+    min-height: 100vh;
+}
+
+
+/* Global Font & Color */
+body,
+form,
+button,
+input,
+select,
+textarea {
+    font: $font-weight-normal normal 100%/1.5 $body-font-family;
+    color: $font-color;
+}
+
+/* Global Text Selection */
+::selection {
+    background: $primary-color;
+    color: $white;
+    text-shadow: none;
+}
+
+/* Global Wrapper */
+#main-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    .admin-bar & {
+        min-height: calc(100vh - 46px);
+
+        @include mq($mq-wpadmin) {
+            min-height: calc(100vh - 32px);
+        }
+    }
+}

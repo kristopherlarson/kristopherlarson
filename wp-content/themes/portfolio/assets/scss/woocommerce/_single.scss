@@ -1,0 +1,16 @@
+/*
+====================
+	WOO PRODUCT SINGLE STYLES
+====================
+*/
+
+.woocommerce {
+
+    &.single-product {
+        .up-sells,
+        .related {
+            clear: both;
+        }
+    }
+
+}

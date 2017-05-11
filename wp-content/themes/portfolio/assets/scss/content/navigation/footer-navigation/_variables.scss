@@ -1,0 +1,50 @@
+// Setup Navigation
+
+// div.main-nav
+$sub-nav-height : auto !default;
+$sub-nav-width  : 100% !default;
+
+// ul.navbar
+$foot-nav-top-margin    : false !default;
+$foot-nav-bottom-margin : false !default;
+$foot-nav-left-margin   : false !default;
+$foot-nav-right-margin  : false !default;
+$foot-nav-top-padding   : false !default;
+$foot-nav-bottom-padding: false !default;
+$foot-nav-left-padding  : false !default;
+$foot-nav-right-padding : false !default;
+$foot-nav-background    : transparent !default;
+// Mixin position needs to be set for offset variables to work
+$foot-nav-offset-top    : false !default;
+$foot-nav-offset-right  : false !default;
+$foot-nav-offset-bottom : false !default;
+$foot-nav-offset-left   : false !default;
+
+// .navbar li
+$foot-nav-li-line-height: 1 !default;
+$foot-nav-li-padding    : rem-calc(0 20px) !default;
+
+// .navbar a
+$foot-nav-link-color        : $white !default;
+$foot-nav-link-line-height  : 1 !default;
+$foot-nav-link-font-size    : rem-calc(12px) !default;
+$foot-nav-link-line-height  : 1 !default;
+$foot-nav-link-font-family  : inherit !default;
+$foot-nav-link-font-weight  : $font-weight-semibold !default;
+$foot-nav-link-padding      : rem-calc(0 4px) !default;
+$foot-nav-link-margin       : 0 !default;
+
+// .navbar hover & active effects
+$foot-nav-link-hover        : $white !default;
+$foot-nav-link-active       : $white !default;
+$foot-nav-hover-background  : transparent !default;
+$foot-nav-active-background : transparent !default;
+
+// If hover line
+$foot-nav-hover-line: $white !default;
+$foot-nav-hover-line-pixel-height   : 1px !default;
+$foot-nav-hover-line-pixel-width    : 100% !default;
+$foot-nav-hover-line-offset-top     : auto !default;
+$foot-nav-hover-line-offset-right   : auto !default;
+$foot-nav-hover-line-offset-bottom  : -8px !default;
+$foot-nav-hover-line-offset-left    : 0 !default;
