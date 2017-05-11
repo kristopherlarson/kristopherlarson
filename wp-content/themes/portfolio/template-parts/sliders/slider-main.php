@@ -1,8 +1,8 @@
-<section class="featured-slider">
+<section class="transition-slider">
 
     <?php
 
-    $slider_images = get_field('featured_slider');
+    $slider_images = get_field('transition_slider');
 
     if (!empty($slider_images)):
 

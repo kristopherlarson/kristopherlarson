@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var el = document.getElementsByClassName('featured-slider'),
+	var el = document.getElementsByClassName('transition-slider'),
 		$el = $( el );
 
 
@@ -10,7 +10,7 @@
 
 		if ( el.length ) {
 			runSlick();
-			console.info( 'Initialized homepage slick fullscreen.' );
+			console.info( 'Initialized transition slider.' );
 		}
 
 	};
@@ -25,7 +25,7 @@
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplaySpeed: 4500,
-			speed: 2500,
+			speed: 5500,
 			fade: true,
 			arrows: false,
 			dots: true,

@@ -14,5 +14,4 @@
         get_template_part('template-parts/navigation/menu-footer'); ?>
     </nav>
 
-    <a href="https://tenthmusedesign.com" rel="nofollow" target="_blank">Inspired by Tenth Muse Design</a>
 </footer>
