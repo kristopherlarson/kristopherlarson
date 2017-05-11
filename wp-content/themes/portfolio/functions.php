@@ -15,8 +15,6 @@ require_once( 'functions/register.php' );
 require_once( 'functions/media.php' );
 require_once( 'functions/gallery.php' );
 require_once( 'functions/font.php' );
-require_once( 'functions/branding.php' );
-require_once( 'functions/forms.php' );
 require_once( 'functions/post-types.php' );
 require_once( 'functions/social.php' );
 require_once( 'functions/custom.php' );
