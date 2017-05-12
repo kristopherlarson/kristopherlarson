@@ -21,15 +21,8 @@ get_template_part( 'template-parts/tracking/analytics' ) ?>
 
 <div id="main-container" class="site-wrapper">
 
-	<?php // Content: Header
-	if ( class_exists( 'WooCommerce' ) ) {
 
-		get_template_part( 'template-parts/header/header-shop' );
+		<?php get_template_part( 'template-parts/header/header-main' ); ?>
 
-	} else {
-
-		get_template_part( 'template-parts/header/header-main' );
-
-	} ?>
 
     <div class="<?php echo is_front_page() ? 'home' : 'page' ?>-content site-content">

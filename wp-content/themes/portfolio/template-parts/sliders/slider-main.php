@@ -1,4 +1,4 @@
-<section class="transition-slider">
+<section class="featured-slider">
 
     <?php
 
@@ -11,7 +11,6 @@
             <figure>
 
                 <div class="media-cover background-cover lazyload"
-                     data-expand="-20"
                      data-bgset="<?php echo $slider_image['sizes']['slider-image-small']; ?> [(max-width: 960px)] |
                                 <?php echo $slider_image['sizes']['slider-image']; ?> [(max-width: 1280px)] |
                                 <?php echo $slider_image['sizes']['slider-image-retina']; ?>"

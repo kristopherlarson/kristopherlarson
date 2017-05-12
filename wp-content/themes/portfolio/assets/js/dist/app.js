@@ -3485,7 +3485,7 @@ Foundation.IHearYou = checkListeners;
 
 	'use strict';
 
-	var el = document.getElementsByClassName('transition-slider'),
+	var el = document.getElementsByClassName('featured-slider'),
 		$el = $( el );
 
 
@@ -3493,7 +3493,7 @@ Foundation.IHearYou = checkListeners;
 
 		if ( el.length ) {
 			runSlick();
-			console.info( 'Initialized transition slider.' );
+			console.info( 'Initialized homepage slick fullscreen.' );
 		}
 
 	};
@@ -3508,7 +3508,7 @@ Foundation.IHearYou = checkListeners;
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplaySpeed: 4500,
-			speed: 5500,
+			speed: 2500,
 			fade: true,
 			arrows: false,
 			dots: true,
