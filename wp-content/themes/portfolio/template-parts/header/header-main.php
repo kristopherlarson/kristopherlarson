@@ -1,9 +1,8 @@
 <header id="masthead" class="site-header">
 
-    <a href="<?php echo home_url(); ?>" class="logo">
+    <div class="logo">
         <img src="<?php echo THEME_IMAGES; ?>logo.png" alt="<?php echo get_bloginfo('name'); ?>">
-		<?php /* <svg class="icon icon-logo"><use xlink:href="#icon-logo" /></svg> */ ?>
-    </a>
+    </div>
 
     <nav class="main-nav" aria-label="Site Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
         <button class="mobile-trigger" type="button">

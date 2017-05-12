@@ -23,8 +23,8 @@
 /* Navigations */
 // @import "navigation/mobile-navigation/imports";
 // @import "navigation/main-navigation/imports";
-@import "navigation/mega-navigation/imports";
-@import "navigation/footer-navigation/imports";
+//@import "navigation/mega-navigation/imports";
+//@import "navigation/footer-navigation/imports";
 
 /* Sidebar */
 @import "sidebar/sidebar";
@@ -39,6 +39,7 @@
 /* Components */
 @import "components/global";
 @import "components/buttons";
+@import "components/portfolio-carousel";
 
 /* Pages */
 @import "page/content-page";

@@ -1,14 +1,15 @@
-.featured-slider {
-	position: relative;
+.transition-slider {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 	width: 100%;
+	z-index: 0;
 
 	figure {
 		margin: 0;
 		height: 100vh;
-		min-height: 300px;
-		@include mq($mq-medium) {
-			min-height: 650px;
-		}
 	}
 
 

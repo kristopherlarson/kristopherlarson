@@ -1,30 +1,35 @@
-<?php
+<div class="portfolio-carousel">
 
-$args = array(
-	'post_type'      => 'portfolio',
-	'post_status'    => 'publish',
-	'posts_per_page' => 10,
-	'orderby'        => 'date',
-);
+	<?php
 
-$custom_query = new WP_Query( $args );
+	$args = array(
+		'post_type'      => 'portfolio',
+		'post_status'    => 'publish',
+		'posts_per_page' => 10,
+		'orderby'        => 'date',
+	);
 
-if ( $custom_query->have_posts() ) :
+	$custom_query = new WP_Query( $args );
 
-	while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+	if ( $custom_query->have_posts() ) :
 
-		<div id="carousel-item">
-			<div class="carousel-image">
+		while ( $custom_query->have_posts() ) : $custom_query->the_post();
 
-			</div>
-		</div>
+	        $port_image = get_field('featured_image');
+	    ?>
 
-	<?php endwhile; ?>
+            <div id="carousel-item">
+                <img src="<?php echo $port_image['sizes'][''];?>">
+            </div>
 
-<?php else : ?>
-	<article>
-		<h1>Sorry, no posts found!</h1>
-	</article>
-<?php endif; ?>
+		<?php endwhile; ?>
 
-<?php wp_reset_postdata(); ?>
+	<?php else : ?>
+        <article>
+            <h1>Sorry, no posts found!</h1>
+        </article>
+	<?php endif; ?>
+
+	<?php wp_reset_postdata(); ?>
+
+</div>

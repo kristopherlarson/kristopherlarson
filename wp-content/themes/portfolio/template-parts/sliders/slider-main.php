@@ -1,4 +1,4 @@
-<section class="featured-slider">
+<section class="transition-slider">
 
     <?php
 

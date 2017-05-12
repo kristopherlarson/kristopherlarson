@@ -6,4 +6,18 @@
 
 .site-header {
 	flex: none;
+
+	.logo {
+		z-index: 1;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+
+		img {
+			width: 650px;
+			height: auto;
+		}
+	}
 }
