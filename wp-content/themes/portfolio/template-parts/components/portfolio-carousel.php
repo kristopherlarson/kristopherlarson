@@ -18,8 +18,8 @@
 	        $port_image = get_field('featured_image');
 	    ?>
 
-            <div id="carousel-item">
-                <img src="<?php echo $port_image['sizes'][''];?>">
+            <div class="carousel-item">
+                <img src="<?php echo $port_image['sizes']['port-home-retina'];?>">
             </div>
 
 		<?php endwhile; ?>

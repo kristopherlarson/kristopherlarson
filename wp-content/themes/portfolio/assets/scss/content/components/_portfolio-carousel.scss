@@ -1,15 +1,18 @@
 .portfolio-carousel {
-	position: fixed;
+	position: absolute;
+	min-height: 550px;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	background-color: $white;
 	margin-top: 70px;
+	padding: 70px 70px 70px 90px;
+	display: flex;
+	align-items: center;
+	z-index: 99;
 
-	.carousel-image {
-		width: 200px;
-		height: 300px;
-		background-repeat: no-repeat;
+	.carousel-item {
+		margin: 0 9px;
 	}
 }
